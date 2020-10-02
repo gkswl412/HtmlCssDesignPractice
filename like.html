@@ -13,6 +13,19 @@
             position: relative;
         }
 
+        .search form {
+            display: flex;
+        }
+
+        .search .search-field {
+            width: 100%;
+        }
+
+        .search .cancel-btn {
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
         .search input {
             width: 100%;
             
@@ -76,8 +89,12 @@
 <body>
     <!-- 검색영역 -->
     <header class="search">
-        <input placeholder="Search" type="text" />
-        <img class="search-icon" src="img/icon/search.svg" />
+        <form>
+            <input class="search-field" placeholder="Search" type="text" />
+            <button
+            class="cancel-btn">취소</button>
+        </form>
+            <img class="search-icon" src="img/icon/search.svg" />
     </header>
 
     <!-- 텍스트영역 -->
