@@ -72,6 +72,24 @@
             align-items: center;
             position: relative;
         }
+        /* pseudo element */
+        .item:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: 0.2s;
+        }
+
+        .item:hover:after{
+            background-color: rgba(0, 0, 0, 0.12);
+        }
+
+        .item:active:after{
+            background-color: rgba(0, 0, 0, 0.2);
+        }
 
         /* 리스트 시작 */
         .item .num {
@@ -113,13 +131,13 @@
     </div>
 
     <ul class="swiper">
-        <li class="mouse-effect"></li>
-        <li class="mouse-effect"></li>
-        <li class="mouse-effect"></li>
+        <li></li>
+        <li></li>
+        <li></li>
     </ul>
 
     <ul class="list">
-        <li class="item mouse-effect">
+        <li class="item">
             <div class="num">1</div>
             <div  class="infos">
                 <div class="title">Hello World</div>
@@ -129,7 +147,7 @@
                 </div>
             </div>
         </li>
-        <li class="item mouse-effect">
+        <li class="item">
             <div class="num">2</div>
             <div  class="infos">
                 <div class="title">Hello World</div>
@@ -139,7 +157,7 @@
                 </div>
             </div>
         </li>
-        <li class="item mouse-effect">
+        <li class="item">
             <div class="num">3</div>
             <div class="infos">
                 <div class="title">Hello World</div>
@@ -150,20 +168,5 @@
             </div>
         </li>
     </ul>
-
-    <nav class="gnb">
-        <a href="index.html" class="cover mouse-effect">
-            <img src="img/icon/cover.svg">
-        </a>
-        <a href="issue.html" class="issue mouse-effect active">
-            <img src="img/icon/issue.svg">
-        </a>
-        <a href="like.html" class="like mouse-effect">
-            <img src="img/icon/like.svg">
-        </a>
-        <a href="mypage.html" class="mypage mouse-effect">
-            <img src="img/icon/more.svg">
-        </a>
-    </nav>
 </body>
 </html>
